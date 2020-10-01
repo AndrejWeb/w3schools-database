@@ -13,7 +13,7 @@ https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
 
 However, there is nowhere a link to download the database so I decided to create a SQL code for it which I hope you'll find useful because it is nice to have this database locally where you can perform all sorts of SQL queries, tests, for practicing and learning purposes etc. Enjoy!
 
-When the SQL file is executed it creates database named __w3schools__ with the following tables
+When the SQL file is executed it creates database named __w3schools__ with the following 8 tables
 
     categories
     customers
@@ -26,7 +26,7 @@ When the SQL file is executed it creates database named __w3schools__ with the f
     
 and inserts the respective data. 
 
-You can change the database name if you want by modifying these 2 lines of code
+You can change the database name if you want by modifying these 2 lines of code in your ide
 
     CREATE DATABASE IF NOT EXISTS `w3schools`
     USE `w3schools`;
