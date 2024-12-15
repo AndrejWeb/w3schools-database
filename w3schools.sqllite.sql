@@ -999,33 +999,33 @@ INSERT INTO `suppliers` (`SupplierID`, `SupplierName`, `ContactName`, `Address`,
 (27, 'Escargots Nouveaux', 'Marie Delamare', '22, rue H. Voiron', 'Montceau', '71300', 'France', '85.57.00.07'),
 (28, 'Gai pâturage', 'Eliane Noz', 'Bat. B 3, rue des Alpes', 'Annecy', '74000', 'France', '38.76.98.06'),
 (29, 'Forêts d''érables', 'Chantal Goulet', '148 rue Chasseur', 'Ste-Hyacinthe', 'J2S 7S8', 'Canada', '(514) 555-2955');
-,  ADD PRIMARY KEY (`CategoryID`);
-,  ADD PRIMARY KEY (`CustomerID`);
-,  ADD PRIMARY KEY (`EmployeeID`);
-,  ADD PRIMARY KEY (`OrderID`)
-,  ADD KEY `CustomerID` (`CustomerID`)
-,  ADD KEY `EmployeeID` (`EmployeeID`)
-,  ADD KEY `ShipperID` (`ShipperID`);
-,  ADD PRIMARY KEY (`OrderDetailID`)
-,  ADD KEY `OrderID` (`OrderID`)
-,  ADD KEY `ProductID` (`ProductID`);
-,  ADD PRIMARY KEY (`ProductID`)
-,  ADD KEY `CategoryID` (`CategoryID`)
-,  ADD KEY `SupplierID` (`SupplierID`);
-,  ADD PRIMARY KEY (`ShipperID`);
-,  ADD PRIMARY KEY (`SupplierID`);
-,  MODIFY `CategoryID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=9;
-,  MODIFY `CustomerID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=92;
-,  MODIFY `EmployeeID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=11;
-,  MODIFY `OrderID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=10444;
-,  MODIFY `OrderDetailID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=519;
-,  MODIFY `ProductID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=78;
-,  MODIFY `ShipperID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=4;
-,  MODIFY `SupplierID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=30;
-,  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`)
-,  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`EmployeeID`) REFERENCES `employees` (`EmployeeID`)
-,  ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`ShipperID`) REFERENCES `shippers` (`ShipperID`);
-,  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`OrderID`)
-,  ADD CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ProductID`);
-,  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`CategoryID`) REFERENCES `categories` (`CategoryID`)
-END TRANSACTION;
+-- ,  ADD PRIMARY KEY (`CategoryID`);
+-- ,  ADD PRIMARY KEY (`CustomerID`);
+-- ,  ADD PRIMARY KEY (`EmployeeID`);
+-- ,  ADD PRIMARY KEY (`OrderID`)
+-- ,  ADD KEY `CustomerID` (`CustomerID`)
+-- ,  ADD KEY `EmployeeID` (`EmployeeID`)
+-- ,  ADD KEY `ShipperID` (`ShipperID`);
+-- ,  ADD PRIMARY KEY (`OrderDetailID`)
+-- ,  ADD KEY `OrderID` (`OrderID`)
+-- ,  ADD KEY `ProductID` (`ProductID`);
+-- ,  ADD PRIMARY KEY (`ProductID`)
+-- ,  ADD KEY `CategoryID` (`CategoryID`)
+-- ,  ADD KEY `SupplierID` (`SupplierID`);
+-- ,  ADD PRIMARY KEY (`ShipperID`);
+-- ,  ADD PRIMARY KEY (`SupplierID`);
+-- ,  MODIFY `CategoryID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=9;
+-- ,  MODIFY `CustomerID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=92;
+-- ,  MODIFY `EmployeeID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=11;
+-- ,  MODIFY `OrderID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=10444;
+-- ,  MODIFY `OrderDetailID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=519;
+-- ,  MODIFY `ProductID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=78;
+-- ,  MODIFY `ShipperID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=4;
+-- ,  MODIFY `SupplierID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, PRIMARY KEY AUTOINCREMENT=30;
+-- ,  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`)
+-- ,  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`EmployeeID`) REFERENCES `employees` (`EmployeeID`)
+-- ,  ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`ShipperID`) REFERENCES `shippers` (`ShipperID`);
+-- ,  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`OrderID`)
+-- ,  ADD CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ProductID`);
+-- ,  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`CategoryID`) REFERENCES `categories` (`CategoryID`)
+-- END TRANSACTION;
